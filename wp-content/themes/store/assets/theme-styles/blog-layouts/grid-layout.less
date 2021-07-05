@@ -1,0 +1,127 @@
+.grid-row {
+  margin: 0;
+}
+
+/* Grid */
+.grid {
+  margin: 10px 0;
+  padding-left: 0;
+  padding-bottom: 17px;
+  border-bottom: solid 1px #eee;
+  @media screen and (max-width: 768px) {
+    border-bottom: none;
+  }
+  &:nth-last-child(2) {
+    border: none;
+  }
+
+  .featured-thumb {
+    border-top: @accent solid 3px;
+    overflow: hidden;
+    .transition(0.3s all ease);
+    padding: 0;
+    @media screen and (max-width: 768px) {
+      img {
+        width: 100%;
+      }
+    }
+    img {
+      .transition(0.4s all ease);
+    }
+    &:hover {
+      img {
+        .transition(0.4s all ease);
+        -moz-filter: brightness(0.9);
+        -webkit-filter: brightness(0.9);
+        filter: brightness(0.9);
+
+      }
+    }
+  }
+  .out-thumb {
+    @media screen and (max-width: 768px) {
+      padding: 10px 3px;
+    }
+    h3 {
+      margin: 5px 0;
+      margin-top: 1px;
+      font-weight: normal;
+      font-size: 19px;
+      a {
+        color: darken(@content,25%);
+        padding-bottom: 2px;
+        &:before {
+          height: 1px;
+          background: darken(@content,25%);
+          width: 98%;
+          left: 1%;
+        }
+      }
+
+    }
+    .postedon {
+      font-size: 12px;
+      color: lighten(@content, 15%);
+      font-weight: 300;
+      margin-bottom: 5px;
+      a {
+        color: lighten(@content, 5%);
+        text-decoration: underline;
+        &:hover {
+          color: @accent;
+        }
+
+      }
+    }
+    .entry-excerpt {
+
+      color: #777;
+      line-height: 1.6em;
+      font-weight:400;
+    }
+  }
+  .readmore {
+    display: block;
+    clear: both;
+  }
+  .hvr-underline-from-center:before {
+    height: 1px;
+    background: @accent;
+  }
+}
+
+.grid_2_column {
+  padding: 0;
+  border-bottom: none;
+  .out-thumb {
+    padding: 12px 0;
+
+  }
+  @media screen and (max-width: 768px) {
+    padding-right: 0px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &:nth-child(even) {
+      padding-left: 10px;
+    }
+    &:nth-child(odd) {
+      padding-right: 10px;
+      clear: left;
+    }
+  }
+
+}
+
+.grid_3_column {
+  padding: 0 10px;
+  @media screen and (min-width: 768px) {
+    &:nth-child(odd) {
+      padding-right: 10px;
+      clear: none;
+    }
+    &:nth-child(3n+1) {
+      clear: left;
+    }
+  }
+}

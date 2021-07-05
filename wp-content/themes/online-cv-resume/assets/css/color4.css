@@ -1,0 +1,23 @@
+#loader-wrapper,.switcher .switch-btn button,#theme-menu-list ul li > a:before,#aside-nav-wrapper .navbar-nav li > a:before,#main-page .inner-title:before,.blog-details .main-post-wrapper .author-meta li.tag a,
+#main-page .inner-title:after,body .theme-line-button:before,body .theme-solid-button:before,.social-icon ul li a:hover,.theme-sidebar .sidebar-keyword ul li a:hover,
+.blog-details .main-post-wrapper .mark-text .icon,.blog-details .main-post-wrapper .list-item li:before,.bottom-content .tag-meta li a:hover,
+.blog-details .main-post-wrapper .bottom-content .share-meta .share-option:hover button,.comment-meta .single-comment .comment .reply:hover,.side-bar-icon span,
+.theme-top-button .right-side-drp .dropdownMenu .social-icon li a:hover,.comment-meta .single-comment .comment .reply a:hover {
+	background: #1ed373;
+}
+.skill-progress .progress .progress-bar {background-color: #1ed373;}
+
+#main-page section#home p span b,#theme-menu-list ul li:hover > a,#theme-menu-list ul li.current_page_item > a,#aside-nav-wrapper .navbar-nav li:hover > a,#aside-nav-wrapper .cv-button,#about .about-block .text p a:hover,
+.my-services .single-service-block h5 span,.fun-facts .single-counter-box .number,.pricing-plan .plan-table .icon-box,body .theme-line-button,body .theme-solid-button:hover,
+.testimonial .single-block .text ul li,.our-blog .blog-post .info li a,.our-blog .blog-post:hover .read-more,.our-blog .blog-post .blog-title a:hover,
+.contact-address .single-block .icon,.contact-address .single-block p a:hover,.isotop-menu-wrapper li.is-checked,.theme-sidebar .sidebar-search button,
+.theme-sidebar .sidebar-recent-post .author a,.theme-sidebar .sidebar-recent-post li:hover .title a,.theme-top-button .right-side-drp .dropdownMenu .subscribe-form button,
+.blog-details .main-post-wrapper .bottom-content .share-meta .share-option .share-icon li a:hover,.theme-top-button .btn-menu-mb,#aside-nav-wrapper .close-menu ,.meta-info a{
+	color: #1ed373;
+}
+body .theme-line-button,.pricing-plan .plan-table:hover .icon-box,body .theme-solid-button,.theme-sidebar .sidebar-keyword ul li a:hover,
+.theme-top-button .right-side-drp .dropdownMenu .social-icon li a:hover {
+	border-color: #1ed373;
+}
+#isotop-gallery-wrapper .project-item .hover-valina:before,
+#isotop-gallery-wrapper .project-item .hover-valina:after {background: rgba(30,211,115,0.8);}

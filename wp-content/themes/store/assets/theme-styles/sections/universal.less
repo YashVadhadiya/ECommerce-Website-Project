@@ -1,0 +1,98 @@
+.body-font {
+  font-family: "Open Sans", sans-serif;
+}
+.title-font {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  .body-font;
+  background: @background;
+  word-wrap: break-word;
+}
+.mega-container {
+  background: @background;
+  max-width: 1170px;
+  margin: auto;
+  margin-top: 20px;
+  overflow: visible;
+}
+a {
+  color: @accent;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: @accent;
+  }
+}
+.container {
+  margin: auto;
+}
+.panel {
+  background: none;
+}#content {
+   margin-top: 30px;
+ }
+
+.grid-row {
+  margin: 0;
+}
+/* section titles */
+.section-title {
+  font-weight: normal;
+  color: @content;
+  font-size: 18px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 991px) {
+    margin-top: 20px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-top: 5px;
+    background: @accent;
+  }
+}
+@media screen and (min-width: 767px) {
+  .scroll-down{
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+    margin-right: 10px;
+    background: @accent;
+    padding: 10px;
+
+    a {
+      color: @onaccent !important;
+    }
+  }
+  .scroll-up{
+    bottom: 45px;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+    margin-right: 10px;
+    background: @accent;
+    padding: 10px;
+
+    a {
+      color: @onaccent !important;
+    }
+  }
+}
+
+.layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: fade(black,60%);
+}
+
+.centered {
+  text-align:center;
+}

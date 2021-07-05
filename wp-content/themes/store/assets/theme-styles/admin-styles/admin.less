@@ -1,0 +1,87 @@
+@import "../variables";
+@import "../functions";
+/* Customizer Styles */
+li#accordion-section-store_sec_pro h3.accordion-section-title {
+	&:before {
+		content: "\f05a";
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+	}
+}
+
+/* ----------------
+Important Links
+ -----------------*/
+.store-important-links{
+  background: @accent;
+  padding: 10px 15px;
+  color: #FFF !important;
+  text-align: center;
+  display: block;
+  margin: 15px 5px;
+  line-height: 1.2;
+  box-shadow: none;
+  border-radius: 5px;
+  font-style: normal;
+  text-decoration: none;
+  .transition( ease all .05s);
+}
+.store-important-links:hover{
+  background: darken(@accent, 5%);
+  transform: translateY(1px);
+}
+
+
+.store-skin-list li.color-boxes {
+  display: inline-block;
+  margin-right: 6px;
+  border: 4px solid transparent;
+}
+
+.store-skin-list li.skin-active {
+  border: 4px solid #FFF;
+}
+
+.store-skin-list li:hover {
+  border: 4px solid #FFF;;
+}
+
+.customize-control-skins {
+  .custom_skin_control {
+    display: inline-block;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 4px;
+    position: relative;
+  }
+  input[type=radio]:checked:before {
+    content: "\f00c" !important;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    text-indent: 0;
+    color: white;
+    position: absolute;
+    font-size: 17px !important;
+    top: 53%;
+    left: 30%;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    background: none;
+    line-height: 0 !important;
+    border-radius: 0;
+  }
+}
+
+/* ---------------------
+  Placeholder Sections
+ ----------------------*/
+ 
+ li#accordion-section-store_fc_boxes_placeholder, #accordion-section-store_a_placeholder, #accordion-section-store_placeholder, #accordion-section-store_slider_placeholder, #accordion-section-store_header_placeholder, #accordion-section-store_main_placeholder {
+	 pointer-events: none;
+	 h3 {
+		 background-color: #f3f3f3 !important;
+		 color: lighten(@accent, 10%) !important;
+	 }
+ }

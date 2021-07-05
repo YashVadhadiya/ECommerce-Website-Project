@@ -1,0 +1,162 @@
+/* Footer Sidebar */
+#footer-sidebar {
+  @footer-bg: darken(@accent,3%);
+  background: @footer-bg;
+  border-top: solid 3px darken(@accent,10%);
+  .footer-column {
+    h3.widget-title {
+      font-weight: normal;
+      font-size: 20px;
+    }
+    .widget {
+      color: darken(@onaccent, 2%);
+      a {
+        color: darken(@onaccent, 10%);
+        font-weight: normal;
+        .transition(0.4s all ease);
+        &:hover {
+          color: @onaccent;
+          background: @accent;
+        }
+      }
+      ul {
+        margin-left: 0px;
+      }
+      ul li {
+        list-style: none;
+        padding: 5px;
+        ul {
+          margin-left: 5px;
+        }
+        li {
+          margin-left: 2px;
+          border-bottom: none;
+          padding: 2px;
+        }
+      }
+    }
+    .widget_tag_cloud {
+      .tagcloud a {
+        background: @accent;
+        font-size: 14px !important;
+        text-transform: uppercase;
+        font-weight: lighter;
+        color: darken(@background, 6%);
+        padding: 7px 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+        &:hover {
+
+        }
+      }
+    }
+    .widget_price_filter {
+      .ui-slider .ui-slider-handle {
+        background-color: darken(@accent,15%);
+      }
+
+      .ui-slider .ui-slider-range {
+        background-color: lighten(@accent,15%);
+      }
+
+      .price_slider_wrapper .ui-widget-content {
+        border-radius: 1em;
+        background-color: darken(@accent,10%);
+      }
+    }
+    button {
+      background: darken(@accent,15%);
+      color: @onaccent;
+    }
+    input[type=text], input[type=search], textarea {
+      background: darken(@accent, 8%);
+      border: solid 1px darken(@accent,10%);
+      .placeholder(darken(@onaccent,5%), false);
+      outline: none;
+      color: @onaccent;
+    }
+    /* Pulse Grow */
+    @-webkit-keyframes hvr-pulse-grow {
+      to {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes hvr-pulse-grow {
+      to {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+      }
+    }
+
+    .tagcloud a {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .tagcloud a:hover, .tagcloud a:focus, .tagcloud a:active {
+      -webkit-animation-name: hvr-pulse-grow;
+      animation-name: hvr-pulse-grow;
+      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.3s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+    }
+    .widget_store_rp {
+      li.rp-item {
+        overflow: auto;
+        clear: both;
+        display: block;
+        padding: 8px 0px;
+        font-size: 13px;
+      }
+      .rp-thumb {
+        width: 52px;
+        float: left;
+        display: inline-block;
+        margin-right: 6px;
+      }
+      .rp-date {
+        color: lighten(@content,40%);
+        font-size: 11px;
+
+      }
+    }
+    .widget_recent_entries, .widget_recent_comments, .widget_categories, .widget_pages, .widget_archive, .widget_meta, .widget_nav_menu {
+      ul li:before {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: lighten(@content,45%);
+        font-size: 10px;
+        margin-right: 5px;
+
+      }
+    }
+  }
+}
+
+#colophon {
+  background: @accent;
+  padding: 15px 10px 15px 10px;
+  color: darken(@onaccent,4%);
+  font-size: 13px;
+  text-align: center;
+  a {
+    color: @onaccent;
+    text-decoration: underline;
+  }
+  .custom-text {
+	  display: inline-block;
+  }
+}

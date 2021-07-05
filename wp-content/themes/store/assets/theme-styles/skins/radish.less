@@ -1,0 +1,50 @@
+@import '../variables';
+@import '../functions';
+@import '_init';
+@accent: #CA2D4F;
+@background: #0F2331;
+@content: #777;
+
+//override here
+.posted-on, .byline,.cat-links,.tags-links{
+  color: darken(@accent, 5%);
+  font-weight: bold;
+  .entry-date, .published updated,.url{
+    color: lighten(@content, 20%);
+    &:hover{
+      color: @content;
+    }
+  }
+}
+.comments-title{
+  color:lighten(@content, 20%);
+}
+.reply-title{
+  color:lighten(@content, 20%);
+}
+.pagination ul  > li  > a, .pagination ul  > li  > span{
+  // color: @accent;
+  background: @accent;
+}
+#comments .comment-metadata time{
+  color: lighten(@content, 30%);
+}
+.recentcomments{
+  color: lighten(@content, 30%);
+}
+.comment-reply-title{
+  color:lighten(@content, 20%);
+}
+#primary-mono h1.entry-title, .page-header{
+  color: @onaccent;
+}
+#secondary .widget_search input[type=search]{
+  background: darken(@background, 6%);
+  border-color:darken(@onaccent,40%);
+}
+.grid .out-thumb h1 a{
+  color: darken(@onaccent, 10%);
+}
+.blog_mixup .postedon{
+  color: @accent;
+}

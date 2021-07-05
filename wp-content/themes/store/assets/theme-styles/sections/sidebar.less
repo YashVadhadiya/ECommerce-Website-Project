@@ -1,0 +1,199 @@
+#secondary {
+  aside {
+    padding: 10px;
+  }
+  /*
+aside:nth-child(odd) {
+      background: #fafafa;
+      border: solid 1px #eee;
+  }
+*/
+  h3.widget-title {
+    font-weight: normal;
+    color: @content;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    &:after {
+      content: "";
+      display: block;
+      width: 12%;
+      height: 2px;
+      margin-top: 5px;
+      background: @accent;
+    }
+  }
+  .widget {
+    a {
+      color: #888;
+      font-weight: normal;
+      .transition( 0.4s all ease );
+      &:hover {
+        color: @accent;
+      }
+    }
+    ul {
+      font-size: 13px;
+      margin-left: 0px;
+      li {
+        list-style: none;
+        border-bottom: solid 1px darken(@background,5%);
+        padding: 6px;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .widget_search {
+    margin-bottom: 20px;
+    label {
+      width: 100%;
+    }
+    input[type=search] {
+      background: white;
+      border: solid 2px darken(@background, 6%);
+      border-radius: 0px;
+      padding: 15px;
+      font-size: 16px;
+      padding-bottom: 10px;
+      outline: none;
+      width: 100%;
+    }
+  }
+  .search-submit {
+    display: none;
+  }
+  /* Some Styling for Default WordPress Widgets */
+  .widget_recent_entries, .widget_recent_comments, .widget_categories, .widget_pages, .widget_archive, .widget_meta, .widget_nav_menu {
+    ul li:before {
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: lighten(@content,25%);
+      font-size: 10px;
+      margin-right: 5px;
+
+    }
+    ul li {
+      .transition( 0.4s all ease );
+
+      &:hover {
+        .transform(translateX(2px));
+      }
+    }
+  }
+  .widget_tag_cloud, .widget_product_tag_cloud {
+    .tagcloud a {
+      background: @accent;
+      font-size: 14px !important;
+      text-transform: uppercase;
+      font-weight: lighter;
+      color: darken(@background, 6%);
+      padding: 7px 5px;
+      margin-bottom: 5px;
+      display: inline-block;
+      &:hover {
+
+      }
+    }
+  }
+  /* Pulse Grow */
+  @-webkit-keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+  }
+
+  .tagcloud a {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .tagcloud a:hover, .tagcloud a:focus, .tagcloud a:active {
+    -webkit-animation-name: hvr-pulse-grow;
+    animation-name: hvr-pulse-grow;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+  .widget_store_rp {
+    li.rp-item {
+      overflow: auto;
+      clear: both;
+      display: block;
+      padding: 8px 0px;
+      font-size: 13px;
+    }
+    .rp-thumb {
+      width: 52px;
+      float: left;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .rp-date {
+      color: lighten(@content,10%);
+      font-size: 11px;
+
+    }
+  }
+
+  button {
+    background: darken(@background,15%);
+    color: @content;
+  }
+  input[type=text], input[type=search], textarea {
+    background: darken(@background, 5%);
+    border: solid 1px darken(@accent,7%);
+    .placeholder(lighten(@content,5%), false);
+    outline: none;
+    color: @content;
+  }
+}
+
+#infinite-handle {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  width: 100%;
+  clear: both;
+  span { background: fade(black, 0%); }
+  span button, span button:hover {
+    background: darken(@background,10%);
+    box-shadow: none;
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+    text-shadow: none;
+    border-radius: 0px;
+    border-bottom: solid 2px darken(@background,20%);
+    padding: 5px 10px;
+    outline: none;
+  }
+}
+/* infinite Loader */
+span.infinite-loader .spinner {
+  left: 50% !important;
+}
+.infinity-end.neverending #main {
+  margin-bottom: 100px;
+}

@@ -1,0 +1,48 @@
+#hero {
+  margin-top: 20px;
+  position: relative;
+  min-height: 350px;
+  @media screen and (max-width: 767px) {
+	  text-align: center;
+  }
+  .layer ~ .hero-container {
+	  color: #ddd;
+  }
+  @media screen and (min-width: 767px) {
+	  .hero-container {
+		  display: flex;
+		  align-items: center;
+	  }
+  }
+  .h-content {
+    margin: 40px auto;
+    .title {
+		margin: 5px auto;
+    }
+    .excerpt {
+      font-size: 20px;
+      line-height: 1.8em;
+      letter-spacing: 0.6px;
+      margin-top: 20px;
+      font-weight: 300;
+      word-spacing: .3px;
+    }
+    .buynow {
+      .more-button, .add_to_cart_button, .added_to_cart {
+        padding: 10px 20px;
+        background: @accent;
+        color: white;
+        display: inline-block;
+        margin-top: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+	  .f-image {
+		  display: block;
+		  margin: 50px auto;
+		  float: none;
+	  }
+  }
+}

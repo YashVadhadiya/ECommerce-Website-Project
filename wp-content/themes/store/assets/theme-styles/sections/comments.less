@@ -1,0 +1,105 @@
+/* --------------- comments -------------- */
+#respond {
+  h3#reply-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  input[type=text] {
+    max-width: 550px;
+  }
+  input, textarea {
+    background: darken(@background,5%);
+    border: solid 1px darken(@background,20%);
+    color: @content;
+    outline: none;
+  }
+  .comment-form-author, .comment-form-email, .comment-form-url, .comment-form-comment {
+    position: relative;
+    input, textarea {
+      padding: 4px 5px 5px 10px;
+      border-radius: 0;
+    }
+    label {
+      background: @accent;
+      color: @background;
+      border-bottom: solid 1px @accent;
+      padding: 5px;
+      margin-right: -5px;
+      min-width: 70px;
+    }
+  }
+  .comment-form-comment {
+    label {
+      margin-bottom: 0px;
+    }
+  }
+  .form-submit {
+    input[type=submit] {
+      box-shadow: none;
+      text-shadow: none;
+      padding: 10px;
+      background: lighten(@background,5%);
+      font-weight: bold;
+      color: @accent;
+      margin-bottom: 60px;
+    }
+  }
+  .comment-notes, .logged-in-as {
+    color: @content;
+  }
+}
+
+#comments {
+  margin-top: 55px;
+  h2.comments-title {
+    font-size: x-large;
+
+  }
+  ol.comment-list {
+    list-style: none;
+    margin-left: 0px;
+  }
+  li.comment {
+    border: solid 1px darken(@background,12%);
+    padding: 10px;
+    margin-top: 15px;
+    list-style: none;
+    background: darken(@background,3%);
+    .comment-content {
+      color: darken(@content,0%);
+      font-weight: lighter;
+    }
+  }
+  li.trackback {
+    background: lighten(@background,10%);
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: solid 1px #eee;
+    font-weight: bold;
+    a { font-weight: normal; }
+  }
+  .vcard img {
+    border: solid 4px @background;
+    border-radius: 5px;
+    margin: 0 10px 10px 0;
+  }
+  .form-allowed-tags {
+    display: none;
+  }
+  .comment-metadata {
+    font-weight: bold;
+    time {
+      float: right;
+      color: darken(@background, 30%);
+      font-weight: lighter;
+      font-style: italic;
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width:480px) {
+  li.comment {
+    margin-left: -5%;
+  }
+}

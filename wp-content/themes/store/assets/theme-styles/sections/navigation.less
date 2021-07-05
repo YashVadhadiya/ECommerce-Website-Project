@@ -1,0 +1,171 @@
+/* -------- Nav Menu ---------- */
+#site-navigation {
+  float: left;
+
+  background: darken(@accent,10%);
+  ul {
+    li {
+      a {
+        padding: 6px 10px;
+        color: darken(@onaccent,8%);
+        font-weight: 400;
+        .transition( 0.2s all ease );
+        &:hover {
+          background: darken(@accent,3%);
+        }
+      }
+      &:hover {
+        a {
+          background: darken(@accent,3%);
+        }
+      }
+      ul li .menu-desc {
+        display: none;
+      }
+      ul.sub-menu, ul.children {
+        background: darken(@accent,3%);
+        top: 52px;
+        display: block;
+        .transition( 0.4s all ease );
+        perspective: 1000;
+        -webkit-perspective: 1000;
+        transform-origin: top;
+        -webkit-transform-origin: top;
+        transform: perspective(350px) rotateX(-90deg);
+        -webkit-transform: perspective(350px) rotateX(-90deg);
+        -moz-transform: perspective(350px) rotateX(-90deg);
+        li ul {
+          transform-origin: left;
+          -webkit-transform-origin: left;
+          .transition( 0.4s all ease );
+          left: 100%;
+          top: 0;
+          opacity: 0;
+          -webkit-transform: rotateY(65deg) !important;
+          transform: rotateY(65deg) !important;
+          -moz-transform: rotateY(65deg) !important;
+          li ul {
+            display: none !important;
+          }
+        }
+        li:hover {
+          .transition(0.2s all ease);
+          /* -webkit-transition: 0.2s all ease !important; */
+          ul {
+            opacity: 1;
+            transform: rotateY(5deg) !important;
+            -webkit-transform: rotateY(5deg) !important;
+            -moz-transform: rotateY(5deg) !important;
+          }
+        }
+        a {
+          padding: 5px 15px;
+          font-weight: normal;
+          font-size: 13px;
+          background: darken(@accent,3%);
+          transition: 0.4s background ease, 0.6s padding ease;
+          &:hover {
+            background: @accent;
+            padding-left: 19px;
+          }
+        }
+        li {
+          border-bottom: dashed 1px lighten(@accent,5%);
+        }
+        li:nth-child(odd) {
+          a {
+            background: darken(@accent,7%);
+          }
+        }
+      }
+      &:hover {
+        .transition(0.4s all ease);
+        -webkit-transition: 0.4s all ease !important;
+        ul.sub-menu, ul.children {
+          display: block;
+          transform: rotateX(0deg);
+          -webkit-transform: rotateX(0deg);
+        }
+      }
+    }
+    /* for the Currently active page */
+    .current_page_item > a, .current-menu-item > a, .current_page_ancestor > a {
+      background: darken(@accent, 10%);
+      color: darken(@onaccent,12%);
+    }
+  }
+  .fa {
+    padding: 0 5px 0 0;
+  }
+  .menu-desc {
+    font-size: 12px;
+    font-weight: 300;
+    color: lighten(@accent,10%);
+    display: inline-block;
+    margin-top: -5px;
+    font-style: italic;
+    text-transform: lowercase;
+  }
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a {
+    color: @accent;
+  }
+}
+
+.slicknav_menu {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .slicknav_menu {
+    display: block;
+    .slicknav_menutxt {
+      margin-top: 2px;
+    }
+  }
+  #site-navigation ul.menu {
+    display: none;
+  }
+  .slicknav_nav {
+    .menu-desc {
+      display: none !important;
+    }
+    a {
+      color: darken(@onaccent,5%);
+      &:hover {
+        background: @accent;
+        color: @onaccent;
+      }
+      .fa {
+        margin-right: 5px;
+      }
+    }
+    li:hover {
+      background: @accent;
+      a { color: @onaccent; }
+    }
+    .slicknav_arrow {
+      display: none;
+    }
+  }
+  .slicknav_nav .slicknav_row:hover {
+    background: @accent;
+  }
+  .slicknav_menu {
+    background: darken(@accent,8%);
+  }
+  .slicknav_btn {
+    background: darken(@accent,12%);
+    border: solid 1px darken(@accent,5%);
+  }
+  .slicknav_menutxt {
+    color: @onaccent !important;
+    text-shadow: none !important;
+  }
+  .slicknav_icon-bar {
+    background-color: @onaccent !important;
+    position: relative;
+    top: 2px;
+  }
+}

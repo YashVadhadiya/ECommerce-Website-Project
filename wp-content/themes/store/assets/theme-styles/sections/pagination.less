@@ -1,0 +1,43 @@
+/* --------------- pagination ------------ */
+.pagination {
+  margin: 20px 0;
+  padding-top: 25px;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  ul {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0;
+    margin-left: 0px;
+    & > li {
+      display: inline;
+      & > a {
+        color: darken(@accent, 1%);
+        .transition(all 0.4s ease);
+      }
+      & > a:hover {
+        color: @accent;
+        background: @background;
+      }
+    }
+  }
+  .current {
+    background: #ddd;
+  }
+}
+.pagination ul &>li &>a, .pagination ul &>li &>span {
+  float: left;
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  margin-right: 5px;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  display: inline-block;
+  color: #aaa;
+  &:hover {
+    background: none;
+  }
+}

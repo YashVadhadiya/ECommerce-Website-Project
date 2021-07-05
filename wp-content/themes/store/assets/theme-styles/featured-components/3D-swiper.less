@@ -1,0 +1,40 @@
+/* swiper fp - 3d Cube & grid */
+#featured-products, #featured-posts {
+  position: relative;
+  padding: 15px;
+  padding-right: 10px;
+  overflow: hidden;
+}
+/* 3d Cube */
+.fp-container,.fposts-container {
+  width: auto;
+  height: auto;
+  .swiper-slide {
+    img {
+      width: 100%;
+    }
+    .product-details {
+      background: fade(@accent, 80%);
+      text-align: center;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      padding: 7px;
+      color: @onaccent;
+      ins {
+        background: none;
+      }
+      h3 {
+        margin: 0;
+        @media screen and (max-width: 991px) {
+          font-size: 14px;
+        }
+
+      }
+    }
+  }
+}
+.swiper-wrapper {
+  margin-bottom: 25px;
+}
